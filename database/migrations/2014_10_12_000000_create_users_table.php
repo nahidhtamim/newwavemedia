@@ -20,6 +20,11 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->tinyInteger('role_as')->default('1');
+            $table->string('image')->default('avatar.png');
+            $table->string('address');
+            $table->string('phone');
+            $table->tinyInteger('status')->default('1');
             $table->timestamps();
         });
     }
