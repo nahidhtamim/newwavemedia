@@ -22,9 +22,12 @@ use App\Http\Controllers\FrontendController;
 
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('/about', [FrontendController::class, 'about']);
-Route::get('/service/{id}', [FrontendController::class, 'service']);
-Route::post('/email', [MailController::class, 'sendEmail'])->name('send.email');
+Route::get('/contact', [FrontendController::class, 'about']);
+Route::get('/about', [FrontendController::class, 'about']);
 
-Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
+//Route::post('/email', [MailController::class, 'sendEmail'])->name('send.email');
+
+//Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 
 Auth::routes();

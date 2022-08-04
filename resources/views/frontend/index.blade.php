@@ -1,7 +1,7 @@
 
 @extends('layouts.front')
 @section('title')
-Home | A Premium Media Centerendsection
+Home | A Premium Media Company
 @endsection
 @section('contents')
 

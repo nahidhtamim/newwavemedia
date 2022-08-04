@@ -9,4 +9,20 @@ class FrontendController extends Controller
     public function index(){
         return view('frontend.index');
     }
+
+    public function about(){
+        return view('frontend.about');
+    }
+
+    public function contact(){
+        return view('frontend.contact');
+    }
+
+    public function print(){
+        return view('frontend.print-publications');
+    }
+
+    public function digital(){
+        return view('frontend.digital-overview');
+    }
 }

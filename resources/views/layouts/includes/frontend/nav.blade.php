@@ -1,7 +1,7 @@
 <!-- Header -->
 <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand h1" href="index.html">
+        <a class="navbar-brand h1" href="{{url('/')}}">
             <img src="{{asset('frontend/img/logo-removebg-preview.png')}}" alt="" height="30px">
             <!-- <i class='bx bx-buildings bx-sm text-dark'></i>
             <span class="text-dark h4">New</span> <span class="text-primary h4">Wave</span> Media -->
@@ -14,19 +14,19 @@
             <div class="flex-fill mx-xl-5 mb-2">
                 <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url('/')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url('/about')}}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Print Publications</a>
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url('/print-publications')}}">Print Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="pricing.html">Digital Overview</a>
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url('/digital-overview')}}">Digital Overview</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{url('/contact')}}">Contact</a>
                     </li>
                 </ul>
             </div>
