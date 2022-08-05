@@ -2,7 +2,7 @@
 <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand h1" href="{{url('/')}}">
-            <img src="{{asset('frontend/img/logo-removebg-preview.png')}}" alt="" height="30px">
+            <img src="{{asset('frontend/img/logo.png')}}" alt="" height="30px">
             <!-- <i class='bx bx-buildings bx-sm text-dark'></i>
             <span class="text-dark h4">New</span> <span class="text-primary h4">Wave</span> Media -->
         </a>

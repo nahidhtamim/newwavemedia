@@ -5,8 +5,8 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="{{asset('frontend/img/apple-icon.png')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/favicon.ico')}}">
+    <link rel="apple-touch-icon" href="{{asset('frontend/img/fav.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/fav.ico')}}">
     <!-- Load Require CSS -->
     <link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet">
     <!-- Font CSS -->
@@ -22,18 +22,18 @@
 <body>
 
 
-<!-- ***** Header Area Start ***** -->
-    
-@include('layouts.includes.frontend.nav')
-    
-<!-- ***** Header Area End ***** -->
-<!-- ***** Main Area Start ***** -->
-@yield('contents')
-<!-- ***** Main Area End ***** -->
+    <!-- ***** Header Area Start ***** -->
+        
+    @include('layouts.includes.frontend.nav')
+        
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Main Area Start ***** -->
+    @yield('contents')
+    <!-- ***** Main Area End ***** -->
 
-<!-- ***** Footer Area Start ***** -->
-@include('layouts.includes.frontend.footer')
-<!-- ***** Main Area End ***** -->
+    <!-- ***** Footer Area Start ***** -->
+    @include('layouts.includes.frontend.footer')
+    <!-- ***** Main Area End ***** -->
 
 
 

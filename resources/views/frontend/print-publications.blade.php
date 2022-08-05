@@ -16,6 +16,133 @@ Print Publications | A Premium Media Company
    </div>    
 @endif
 
+   <!-- Start Banner Hero -->
+   <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+      <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
+          <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
+              <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Our Work</h1>
+              <h3 class="h4 pb-2 regular-400">Elit, sed do eiusmod tempor incididunt</h3>
+              <p class="banner-body pb-2 light-300">
+                  Vector illustration <a class="text-white" href="http://freepik.com/" target="_blank">Freepik</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+                  suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
+              </p>
+              <button type="submit" class="btn rounded-pill btn-outline-light px-4 me-4 light-300">Learn More</button>
+              <button type="submit" class="btn rounded-pill btn-secondary text-light px-4 light-300">Contact Us</button>
+          </div>
+      </div>
+  </div>
+  <!-- End Banner Hero -->
 
+  <!-- Start Our Work -->
+  <section class="container py-5">
+      {{-- <div class="row justify-content-center my-5">
+          <div class="filter-btns shadow-md rounded-pill text-center col-auto">
+              <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active" data-filter=".service" href="#">All</a>
+              <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".maritime" href="#">Maritime Reporter</a>
+              <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".news" href="#">Marine News</a>
+              <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".offshore" href="#">Offshore Engineer</a>
+              <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".marine" href="#">Marine Technology Reporter</a>
+          </div>
+      </div> --}}
+
+      <div class="row services gx-lg-5">
+          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service maritime">
+              <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
+                  <img class="card-img-top" src="{{asset('frontend/img/publications/maritime.jpg')}}" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title light-300 text-dark">Maritime Reporter</h5>
+                      <p class="card-text light-300 text-dark">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.
+                      </p>
+                      <span class="text-decoration-none text-primary light-300">
+                            Read more <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                  </div>
+              </div>
+          </a>
+          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service news">
+              <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                  <img class="card-img-top" src="{{asset('frontend/img/publications/marine.jpg')}}" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title light-300 text-dark">Marine News</h5>
+                      <p class="card-text light-300 text-dark">
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                      <span class="text-decoration-none text-primary light-300">
+                            Read more <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                  </div>
+              </div>
+          </a>
+          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service offshore">
+              <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                  <img class="card-img-top" src="{{asset('frontend/img/publications/offshore.jpg')}}" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title light-300 text-dark">Offshore Engineer</h5>
+                      <p class="card-text light-300 text-dark">
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatdolore eu fugiat nulla pariatur.
+                      </p>
+                      <span class="text-decoration-none text-primary light-300">
+                            Read more <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                  </div>
+              </div>
+          </a>
+          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service marine">
+              <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
+                  <img class="card-img-top" src="{{asset('frontend/img/publications/maritime-reported.jpg')}}" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title light-300 text-dark">Marine Technology Reporter</h5>
+                      <p class="card-text light-300 text-dark">
+                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <span class="text-decoration-none text-primary light-300">
+                            Read more <i class='bx bxs-hand-right ms-1'></i>
+                        </span>
+                  </div>
+              </div>
+          </a>
+      </div>
+  </section>
+  <!-- End Our Work -->
+
+  <!-- Start Feature Work -->
+  <section class="bg-light py-5">
+      <div class="feature-work container my-4">
+          <div class="row d-flex d-flex align-items-center">
+              <div class="col-lg-5">
+                  <h3 class="feature-work-title h4 text-muted light-300">Featured Work</h3>
+                  <h1 class="feature-work-heading h2 py-3 semi-bold-600">Transform with us</h1>
+                  <p class="feature-work-body text-muted light-300">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                  </p>
+                  <p class="feature-work-footer text-muted light-300">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+              <div class="col-lg-6 offset-lg-1 align-left">
+                  <div class="row">
+                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-01.jpg')}}">
+                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-01.jpg')}}">
+                      </a>
+                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-02.jpg')}}">
+                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-02.jpg')}}">
+                      </a>
+                  </div>
+                  <div class="row pt-4">
+                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-03.jpg')}}">
+                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-03.jpg')}}">
+                      </a>
+                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-02.jpg')}}">
+                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-02.jpg')}}">
+                      </a>
+                  </div>
+                  <div class="text-center pt-5" role="group" aria-label="First group">
+                     <button type="button" class="btn btn-secondary text-white">More</button>
+                 </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- End Feature Work -->
 
 @endsection

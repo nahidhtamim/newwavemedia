@@ -155,7 +155,6 @@ Home | A Premium Media Company
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Maritime Reporter</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
                         </div>
                     </div>
                 </a>
@@ -168,7 +167,6 @@ Home | A Premium Media Company
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marine News</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
                         </div>
                     </div>
                 </a>
@@ -181,7 +179,6 @@ Home | A Premium Media Company
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Offshore Engineer</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
                         </div>
                     </div>
                 </a>
@@ -194,7 +191,6 @@ Home | A Premium Media Company
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
                             <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marine Technology Reporter</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
                         </div>
                     </div>
                 </a>
@@ -237,35 +233,34 @@ Home | A Premium Media Company
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="{{asset('frontend/img/recent-work-01.jpg')}}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Marine Link</h3>
-                                <p class="card-text">Ullamco laboris nisi ut aliquip ex</p>
+                            <div class="recent-work-content">
+                                <h3 class="card-title"> <b>Marine Link</b> </h3>
                             </div>
                         </div>
                     </a>
-                </div><!-- End Recent Work -->
+                </div>
+                <!-- End Recent Work -->
 
                 <!-- Start Recent Work -->
                 <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="{{asset('frontend/img/recent-work-02.jpg')}}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Offshore Engineer</h3>
-                                <p class="card-text">Psum officia anim id est laborum.</p>
+                            <div class="recent-work-content">
+                                <h3 class="card-title"> <b>Offshore Engineer</b> </h3>
                             </div>
                         </div>
                     </a>
-                </div><!-- End Recent Work -->
+                </div>
+                <!-- End Recent Work -->
 
                 <!-- Start Recent Work -->
                 <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="{{asset('frontend/img/recent-work-03.jpg')}}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Marine Technology News</h3>
-                                <p class="card-text">Sum dolor sit consencutur</p>
+                            <div class="recent-work-content">
+                                <h3 class="card-title"> <b>Marine Technology News</b> </h3>
                             </div>
                         </div>
                     </a>

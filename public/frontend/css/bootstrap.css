@@ -251,7 +251,7 @@ a {
 
 /* line 265, src/assets/scss/_reboot.scss */
 a:hover {
-  color: #35289b;
+  color: #0d2e62;
 }
 
 /* line 277, src/assets/scss/_reboot.scss */
@@ -3700,15 +3700,15 @@ fieldset:disabled .btn {
 /* line 25, src/assets/scss/mixins/_buttons.scss */
 .btn-primary:hover {
   color: #f6f9fe;
-  background-color: #382ba5;
-  border-color: #35289b;
+  background-color: #0d2e62;
+  border-color: #0d2e62;
 }
 
 /* line 31, src/assets/scss/mixins/_buttons.scss */
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #f6f9fe;
-  background-color: #382ba5;
-  border-color: #35289b;
+  background-color: #0d2e62;
+  border-color: #0d2e62;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(93, 80, 203, 0.5);
           box-shadow: 0 0 0 0.25rem rgba(93, 80, 203, 0.5);
 }
@@ -3718,8 +3718,8 @@ fieldset:disabled .btn {
 .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
   color: #f6f9fe;
-  background-color: #35289b;
-  border-color: #322692;
+  background-color: #0d2e62;
+  border-color: #0d2e62;
 }
 
 /* line 55, src/assets/scss/mixins/_buttons.scss */
@@ -3747,15 +3747,15 @@ fieldset:disabled .btn {
 /* line 25, src/assets/scss/mixins/_buttons.scss */
 .btn-secondary:hover {
   color: #000;
-  background-color: #7a7ded;
-  border-color: #7275ec;
+  background-color: #be4839;
+  border-color: #be4839;
 }
 
 /* line 31, src/assets/scss/mixins/_buttons.scss */
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #000;
-  background-color: #7a7ded;
-  border-color: #7275ec;
+  background-color: #be4839;
+  border-color: #be4839;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(83, 87, 199, 0.5);
           box-shadow: 0 0 0 0.25rem rgba(83, 87, 199, 0.5);
 }
@@ -3765,8 +3765,8 @@ fieldset:disabled .btn {
 .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active,
 .show > .btn-secondary.dropdown-toggle {
   color: #000;
-  background-color: #8185ee;
-  border-color: #7275ec;
+  background-color: #be4839;
+  border-color: #be4839;
 }
 
 /* line 55, src/assets/scss/mixins/_buttons.scss */

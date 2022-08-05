@@ -25,4 +25,8 @@ class FrontendController extends Controller
     public function digital(){
         return view('frontend.digital-overview');
     }
+
+    public function publication(){
+        return view('frontend.publication');
+    }
 }

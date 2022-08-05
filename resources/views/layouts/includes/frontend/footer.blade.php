@@ -5,9 +5,7 @@
 
                 <div class="col-lg-3 col-12 align-left">
                     <a class="navbar-brand" href="index.html">
-                        <img src="{{asset('frontend/img/logo-removebg-preview.png')}}" alt="" height="40px" style="padding: 5px 10px; background:#ffffff; border-radius: 25px;">
-                        <!-- <i class='bx bx-buildings bx-sm text-light'></i>
-                        <span class="text-light h5">New Wave</span> <span class="text-light h5 semi-bold-600">Media</span> -->
+                        <img src="{{asset('frontend/img/logo-inverse.png')}}" alt="" height="40px">
                     </a>
                     <p class="text-light my-lg-4 my-2">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -107,7 +105,7 @@
                 <div class="row pt-2">
                     <div class="col-lg-12 col-sm-12 text-center">
                         <p class="text-center text-light light-300">
-                            © Copyright 2021 New Wave Media. All Rights Reserved.
+                            © Copyright 2022 New Wave Media. All Rights Reserved.
                         </p>
                     </div>
                 </div>
