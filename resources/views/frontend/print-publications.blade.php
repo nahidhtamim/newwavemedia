@@ -46,13 +46,14 @@ Print Publications | A Premium Media Company
       </div> --}}
 
       <div class="row services gx-lg-5">
-          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service maritime">
+        @foreach ($publications as $publication)
+          <a href="{{url('/publication/'.$publication->slug)}}" class="col-sm-6 col-lg-6 text-decoration-none service maritime">
               <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
-                  <img class="card-img-top" src="{{asset('frontend/img/publications/maritime.jpg')}}" alt="...">
+                  <img class="card-img-top" src="{{asset('/uploads/publication_images/'.$publication->image)}}" alt="...">
                   <div class="card-body">
-                      <h5 class="card-title light-300 text-dark">Maritime Reporter</h5>
+                      <h5 class="card-title light-300 text-dark">{{$publication->description_top}}</h5>
                       <p class="card-text light-300 text-dark">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.
+                        {{$publication->title}}
                       </p>
                       <span class="text-decoration-none text-primary light-300">
                             Read more <i class='bx bxs-hand-right ms-1'></i>
@@ -60,48 +61,8 @@ Print Publications | A Premium Media Company
                   </div>
               </div>
           </a>
-          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service news">
-              <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
-                  <img class="card-img-top" src="{{asset('frontend/img/publications/marine.jpg')}}" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title light-300 text-dark">Marine News</h5>
-                      <p class="card-text light-300 text-dark">
-                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      </p>
-                      <span class="text-decoration-none text-primary light-300">
-                            Read more <i class='bx bxs-hand-right ms-1'></i>
-                        </span>
-                  </div>
-              </div>
-          </a>
-          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service offshore">
-              <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
-                  <img class="card-img-top" src="{{asset('frontend/img/publications/offshore.jpg')}}" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title light-300 text-dark">Offshore Engineer</h5>
-                      <p class="card-text light-300 text-dark">
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatdolore eu fugiat nulla pariatur.
-                      </p>
-                      <span class="text-decoration-none text-primary light-300">
-                            Read more <i class='bx bxs-hand-right ms-1'></i>
-                        </span>
-                  </div>
-              </div>
-          </a>
-          <a href="work-single.html" class="col-sm-6 col-lg-6 text-decoration-none service marine">
-              <div class="service-work overflow-hidden card mx-5 mx-sm-0 mb-5">
-                  <img class="card-img-top" src="{{asset('frontend/img/publications/maritime-reported.jpg')}}" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title light-300 text-dark">Marine Technology Reporter</h5>
-                      <p class="card-text light-300 text-dark">
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </p>
-                      <span class="text-decoration-none text-primary light-300">
-                            Read more <i class='bx bxs-hand-right ms-1'></i>
-                        </span>
-                  </div>
-              </div>
-          </a>
+          @endforeach
+
       </div>
   </section>
   <!-- End Our Work -->

@@ -54,15 +54,15 @@ Dashboard | A Premium Media Company
                             <tr>
                                 <td>{{$i++;}}</td>
                                 <td>{{$publication->title}}</td>
-                                <td></td>
-                                <td>{{$publication->description_top}}</td>
-                                <td>{{$publication->description_bottom}}</td>
+                                <td><img src="/uploads/publication_images/{{$publication->image}}" alt="" height="300px"></td>
+                                <td>{!!$publication->description_top!!}</td>
+                                <td>{!!$publication->description_bottom!!}</td>
                                 <td>{!!$publication->youtube_video!!}</td>
                                 <td>{{$publication->slug}}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{url('/edit-publication/{slug}')}}" class="btn btn-primary">Edit</a>
-                                        <a href="{{url('/delete-publication/{slug}')}}" class="btn btn-danger">Delete</a>
+                                        <a href="{{url('/edit-publication/'.$publication->slug)}}" class="btn btn-primary">Edit</a>
+                                        <a href="{{url('/delete-publication/'.$publication->slug)}}" class="btn btn-danger">Delete</a>
                                     </div>
                                 </td>
                             </tr>
@@ -87,7 +87,7 @@ Dashboard | A Premium Media Company
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="user" action="/add-publication" method="POST" enctype="multipart/form-data">
+                        <form class="user" action="{{url('/add-publication')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-12 mb-3 mb-sm-0">
                                 <label for="title" class="text-primary"> <b>Title <span class="text-danger">*</span></b> </label>
@@ -135,8 +135,8 @@ Dashboard | A Premium Media Company
                                 <br>
                             </div>
                             <div class="col-12 mb-3 mb-sm-0">
-                                <label for="images" class="text-primary"> <b>Images</b> <span class="text-danger">*</span> </label>
-                                <input type="file" name="images[]" class="form-control" id="images" accept="image/*" multiple>
+                                <label for="image" class="text-primary"> <b>Image</b> <span class="text-danger">*</span> </label>
+                                <input type="file" name="image" class="form-control" id="image" accept="image/*">
                                 <br>
                             </div>
                             <div class="col-12 mb-3 mb-sm-0">

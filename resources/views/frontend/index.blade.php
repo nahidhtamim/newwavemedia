@@ -118,12 +118,13 @@ Home | A Premium Media Company
 
         <div class="container-fluid pb-3 ">
             <div class="row">
-                <h2 class="h2 text-center col-12 py-5 semi-bold-600 ">Print Publications</h2>
+                
             </div>
         </div>
         <div class="service-tag py-5 bg-secondary">
             <div class="col-md-12">
-                <ul class="nav d-flex justify-content-center">
+                <h2 class="h2 text-center col-12 py-3 semi-bold-600 text-light">Print Publications</h2>
+                {{-- <ul class="nav d-flex justify-content-center">
                     <li class="nav-item mx-lg-4">
                         <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300" href="#" data-filter=".publication">All</a>
                     </li>
@@ -139,7 +140,7 @@ Home | A Premium Media Company
                     <li class="nav-item mx-lg-4">
                         <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".mtr">Marine Technology Reporter</a>
                     </li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
 
@@ -149,54 +150,18 @@ Home | A Premium Media Company
         <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 publications">
 
             <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-3 col-sm-6 publication maritime">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="{{asset('frontend/img/publications/maritime.jpg')}}" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Maritime Reporter</span>
+            @foreach ($publications as $publication)
+                <div class="col-xl-3 col-md-6 col-sm-6 publication maritime">
+                    <a href="{{url('/publication/'.$publication->slug)}}" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                        <img class="service card-img" src="{{asset('/uploads/publication_images/'.$publication->image)}}" alt="Card image">
+                        <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="service-work-content text-left text-light">
+                                <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">{{$publication->title}}</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-3 col-sm-6 publication marine">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{{asset('frontend/img/publications/marine.jpg')}}" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marine News</span>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-3 col-sm-6 publication offshore">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{{asset('frontend/img/publications/offshore.jpg')}}" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Offshore Engineer</span>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-3 col-sm-6 publication mtr">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="{{asset('frontend/img/publications/maritime-reported.jpg')}}" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marine Technology Reporter</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End Recent Work -->
-
+                    </a>
+                </div>
+            @endforeach
         </div>
     </section>
     <!-- End Service -->

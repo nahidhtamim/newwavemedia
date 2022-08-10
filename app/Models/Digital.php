@@ -13,6 +13,7 @@ class Digital extends Model
 
     protected $fillable = [
         'title',
+        'image',
         'description',
         'link',
         'slug',

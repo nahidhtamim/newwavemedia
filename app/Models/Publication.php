@@ -13,6 +13,7 @@ class Publication extends Model
 
     protected $fillable = [
         'title',
+        'image',
         'description_top',
         'description_bottom',
         'youtube_video',

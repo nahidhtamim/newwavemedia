@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('digitals', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('image');
             $table->string('description')->nullable();
             $table->string('link');
             $table->string('slug')->unique();
