@@ -34,7 +34,7 @@
     <!-- End Banner Hero -->
 
     <!-- Start Work Sigle -->
-    <section class="container py-5">
+    <section class="container py-5" data-aos="zoom-in" data-aos-duration="2000">
 
         <div class="row pt-5">
             <div class="worksingle-content col-lg-8 m-auto text-left justify-content-center">
@@ -48,7 +48,7 @@
         <div class="row justify-content-center pb-4">
             <div class="col-lg-8">
                 <div id="templatemo-slide-link-target" class="card mb-3">
-                    <img class="img border rounded" src="{{asset('/uploads/publication_images/'.$publication->image)}}" alt="Card image cap" height="500px">
+                    <img class="img border rounded" src="{{asset('/uploads/publication_images/'.$publication->image)}}" alt="{{$publication->title}}">
                 </div>
             </div>
         </div><!-- End Slider -->

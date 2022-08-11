@@ -22,7 +22,8 @@ Home | A Premium Media Company
 
 
     <!-- Start Banner Hero -->
-    <div class="banner-wrapper bg-light">
+    <div class="banner-wrapper bg-light" data-aos="fade-in"
+    data-aos-duration="2000">
         <div id="index_banner" class="banner-vertical-center-index container-fluid-xl">
 
             <!-- Start slider -->
@@ -101,7 +102,8 @@ Home | A Premium Media Company
 
     <!-- Start Service -->
     <section class="service-wrapper py-3">
-        <div class="container-fluid pb-3">
+        <div class="container-fluid pb-3" data-aos="fade-up"
+        data-aos-duration="2000">
             <div class="row">
                 <h2 class="h2 text-center col-12 py-5 semi-bold-600">About</h2>
                 <div class="service-header col-2 col-lg-3 text-end light-300">
@@ -121,32 +123,17 @@ Home | A Premium Media Company
                 
             </div>
         </div>
-        <div class="service-tag py-5 bg-secondary">
+        <div class="service-tag py-5 bg-secondary" data-aos="fade-down"
+        data-aos-duration="2000">
             <div class="col-md-12">
                 <h2 class="h2 text-center col-12 py-3 semi-bold-600 text-light">Print Publications</h2>
-                {{-- <ul class="nav d-flex justify-content-center">
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300" href="#" data-filter=".publication">All</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".maritime">Maritime Reporter</a>
-                    </li>
-                    <li class="filter-btn nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".marine">Marine News</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".offshore">Offshore Engineer</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".mtr">Marine Technology Reporter</a>
-                    </li>
-                </ul> --}}
             </div>
         </div>
 
     </section>
 
-    <section class="container overflow-hidden py-5">
+    <section class="container overflow-hidden py-5" data-aos="fade-down"
+    data-aos-duration="2000">
         <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 publications">
 
             <!-- Start Recent Work -->
@@ -167,7 +154,8 @@ Home | A Premium Media Company
     <!-- End Service -->
 
     <!-- Start View Work -->
-    <section class="bg-secondary">
+    <section class="bg-secondary" data-aos="fade-in"
+    data-aos-duration="2000">
         <div class="container py-5">
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-lg-2 col-12 text-light align-items-center">
@@ -178,7 +166,7 @@ Home | A Premium Media Company
                     <p class="light-300">Quis ipsum suspendisse ultrices gravida.</p>
                 </div>
                 <div class="col-lg-3 col-12 pt-4">
-                    <a href="#" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">View Our Work</a>
+                    <a href="{{url('/digital-overview')}}" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">View Our Work</a>
                 </div>
             </div>
         </div>
@@ -186,52 +174,32 @@ Home | A Premium Media Company
     <!-- End View Work -->
 
     <!-- Start Recent Work -->
-    <section class="py-5 mb-5">
+    <section class="py-5 mb-5" data-aos="zoom-in"
+    data-aos-duration="2000">
         <div class="container">
             <div class="recent-work-header row text-center pb-5">
                 <h2 class="col-md-3 m-auto h2 semi-bold-600 py-5">Our Concerns</h2>
             </div>
             <div class="row gy-5 g-lg-5 mb-4">
 
+                @foreach ($digitals as $digital)
                 <!-- Start Recent Work -->
                 <div class="col-md-4 mb-3">
-                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
-                        <img class="recent-work-img card-img" src="{{asset('frontend/img/recent-work-01.jpg')}}" alt="Card image">
+                    <a href="{{url('/digital/'.$digital->slug)}}" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="{{asset('/uploads/digital_images/'.$digital->image)}}" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content">
-                                <h3 class="card-title"> <b>Marine Link</b> </h3>
+                                {{-- <h3 class="card-title"> <b>{{$digital->title}}</b> </h3> --}}
                             </div>
                         </div>
                     </a>
                 </div>
                 <!-- End Recent Work -->
+                @endforeach
 
-                <!-- Start Recent Work -->
-                <div class="col-md-4 mb-3">
-                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
-                        <img class="recent-work-img card-img" src="{{asset('frontend/img/recent-work-02.jpg')}}" alt="Card image">
-                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                            <div class="recent-work-content">
-                                <h3 class="card-title"> <b>Offshore Engineer</b> </h3>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- End Recent Work -->
-
-                <!-- Start Recent Work -->
-                <div class="col-md-4 mb-3">
-                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
-                        <img class="recent-work-img card-img" src="{{asset('frontend/img/recent-work-03.jpg')}}" alt="Card image">
-                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                            <div class="recent-work-content">
-                                <h3 class="card-title"> <b>Marine Technology News</b> </h3>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- End Recent Work -->
-
+            </div>
+            <div class="text-center pt-5" role="group" aria-label="First group">
+                <a class="btn btn-secondary rounded-pill btn-block shadow px-4 py-2 text-white" href="{{url('/digital-overview')}}">See More</a>
             </div>
         </div>
     </section>

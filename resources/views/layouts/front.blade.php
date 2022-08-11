@@ -12,11 +12,11 @@
     <!-- Font CSS -->
     <link href="{{asset('frontend/css/boxicon.min.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="{{asset('frontend/css/templatemo.css')}}">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
-
+    <!-- Data Aos CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Load Custom CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+    
 </head>
 
 <body>
@@ -65,10 +65,28 @@
         });
 
     </script>
-    <!-- Templatemo -->
-    <script src="{{asset('frontend/js/templatemo.js')}}"></script>
-    <!-- Custom -->
-    <script src="{{asset('frontend/js/custom.js')}}"></script>
+    
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once:true,
+        });
+    </script>
+    <!-- Custom Style -->
+    <script src="{{asset('frontend/js/script.js')}}"></script>
+
+    <script>
+        $(".btn-refresh").click(function(){
+          $.ajax({
+            type: 'GET',
+            url: '/refresh_captcha',
+            success: function(data){
+              $(".captcha span").html(data.captcha);
+            }
+          })
+        })
+      </script>
 
 </body>
 

@@ -31,7 +31,7 @@ class PublicationsController extends Controller
         if($request->hasFile('image')){
             $avatar = $request->file('image');
             $filename = time().'.'.$avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300,300)->save(public_path('/uploads/publication_images/' . $filename));
+            Image::make($avatar)->save(public_path('/uploads/publication_images/' . $filename));
             $publication->image = $filename;
             // $publication->save();
         }
@@ -69,7 +69,7 @@ class PublicationsController extends Controller
             // $publication->save();
         }
         $publication->update();
-        return redirect()->back()->with('status', 'Publications Updated Successfully'); 
+        return redirect('/admin-publications')->with('status', 'Publications Updated Successfully'); 
     }
 
     public function delete_publication($slug){

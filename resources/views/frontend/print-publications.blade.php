@@ -17,7 +17,7 @@ Print Publications | A Premium Media Company
 @endif
 
    <!-- Start Banner Hero -->
-   <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+   <div id="work_banner" class="banner-wrapper bg-light w-100 py-5" data-aos="fade-in" data-aos-duration="2000">
       <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
           <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
               <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Our Work</h1>
@@ -26,15 +26,14 @@ Print Publications | A Premium Media Company
                   Vector illustration <a class="text-white" href="http://freepik.com/" target="_blank">Freepik</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
                   suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
               </p>
-              <button type="submit" class="btn rounded-pill btn-outline-light px-4 me-4 light-300">Learn More</button>
-              <button type="submit" class="btn rounded-pill btn-secondary text-light px-4 light-300">Contact Us</button>
+              <button type="button" class="btn rounded-pill btn-secondary text-light px-4 light-300" href="{{url('/contact')}}">Contact Us</button>
           </div>
       </div>
   </div>
   <!-- End Banner Hero -->
 
   <!-- Start Our Work -->
-  <section class="container py-5">
+  <section class="container py-5" data-aos="zoom-in-left" data-aos-duration="2000">
       {{-- <div class="row justify-content-center my-5">
           <div class="filter-btns shadow-md rounded-pill text-center col-auto">
               <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active" data-filter=".service" href="#">All</a>
@@ -66,44 +65,5 @@ Print Publications | A Premium Media Company
       </div>
   </section>
   <!-- End Our Work -->
-
-  <!-- Start Feature Work -->
-  <section class="bg-light py-5">
-      <div class="feature-work container my-4">
-          <div class="row d-flex d-flex align-items-center">
-              <div class="col-lg-5">
-                  <h3 class="feature-work-title h4 text-muted light-300">Featured Work</h3>
-                  <h1 class="feature-work-heading h2 py-3 semi-bold-600">Transform with us</h1>
-                  <p class="feature-work-body text-muted light-300">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                  </p>
-                  <p class="feature-work-footer text-muted light-300">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur.</p>
-              </div>
-              <div class="col-lg-6 offset-lg-1 align-left">
-                  <div class="row">
-                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-01.jpg')}}">
-                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-01.jpg')}}">
-                      </a>
-                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-02.jpg')}}">
-                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-02.jpg')}}">
-                      </a>
-                  </div>
-                  <div class="row pt-4">
-                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-03.jpg')}}">
-                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-03.jpg')}}">
-                      </a>
-                      <a class="col" data-type="image" data-fslightbox="gallery" href="{{asset('frontend/img/recent-work-02.jpg')}}">
-                          <img class="img-fluid" src="{{asset('frontend/img/recent-work-02.jpg')}}">
-                      </a>
-                  </div>
-                  <div class="text-center pt-5" role="group" aria-label="First group">
-                     <button type="button" class="btn btn-secondary text-white">More</button>
-                 </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- End Feature Work -->
 
 @endsection

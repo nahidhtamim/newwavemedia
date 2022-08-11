@@ -7,12 +7,12 @@ Dashboard | A Premium Media Company
 @if (session('status'))
 <div class="alert alert-success" role="alert">
     {{ session('status') }}
-    <a class="close">&times;</a>
+    <a href="" class="close">&times;</a>
 </div>
 @elseif (session('warning'))
 <div class="alert alert-danger" role="alert">
     {{ session('warning') }}
-    <a class="close">&times;</a>
+    <a href="" class="close">&times;</a>
 </div>
 @endif
 
@@ -102,18 +102,20 @@ Dashboard | A Premium Media Company
                             </div>
                             <div class="col-12">
                                 <label for="description_top" class="text-primary"> <b>Top Description <span class="text-danger">*</span></b> </label>
-                                <textarea name="description_top" rows="2" id="description_top"
+                                <textarea name="description_top" rows="2" id="textarea"
                                     class="form-control text-left @error('description_top') is-invalid @enderror">
                                     Top Description
                                 </textarea>
-                                @error('description_top')
-                                    <p class="text-danger">{{$message}}</p> 
-                                @enderror
+                                <span class="text-danger">
+                                    @error('description_top')
+                                        <p class="text-danger">{{$message}}</p> 
+                                    @enderror
+                                </span>
                                 <br>
                             </div>
                             <div class="col-12">
                                 <label for="description_bottom" class="text-primary"> <b>Bottom Description</b> </label>
-                                <textarea name="description_bottom" rows="2" id="description_bottom"
+                                <textarea name="description_bottom" rows="2" id="textarea_two"
                                     class="form-control text-left">
                                     Bottom Description
                                 </textarea>
@@ -129,13 +131,18 @@ Dashboard | A Premium Media Company
                                 <label for="slug" class="text-primary"> <b>Slug</b> </label>
                                 <input type="text" name="slug" class="form-control @error('slug') is-invalid @enderror" id="slug"
                                     placeholder="Slug">
-                                @error('slug')
-                                    <p class="text-danger">{{$message}}</p> 
-                                @enderror    
+                                    <span class="text-danger">
+                                        @error('slug')
+                                            <p class="text-danger">{{$message}}</p> 
+                                        @enderror
+                                    </span>  
                                 <br>
                             </div>
                             <div class="col-12 mb-3 mb-sm-0">
-                                <label for="image" class="text-primary"> <b>Image</b> <span class="text-danger">*</span> </label>
+                                <label for="image" class="text-primary"> <b>Image</b> <span class="text-danger">*</span> 
+                                    <small>[Use Image of Size 800*800px]</small> 
+                                </label>
+                                
                                 <input type="file" name="image" class="form-control" id="image" accept="image/*">
                                 <br>
                             </div>

@@ -22,14 +22,14 @@ Contact | A Premium Media Company
     <section class="bg-light">
       <div class="container py-4">
           <div class="row align-items-center justify-content-between">
-              <div class="contact-header col-lg-4">
+              <div class="contact-header col-lg-4" data-aos="zoom-out-left" data-aos-duration="2000">
                   <h1 class="h2 pb-3 text-primary">Contact</h1>
                   <h3 class="h4 regular-400">Elit, sed do eiusmod tempor</h3>
                   <p class="light-300">
                       Vector illustration is from Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
                   </p>
               </div>
-              <div class="contact-img col-lg-5 align-items-end col-md-4">
+              <div class="contact-img col-lg-5 align-items-end col-md-4" data-aos="zoom-out-right" data-aos-duration="2000">
                   <img src="{{asset('frontend/img/banner-img-01.svg')}}">
               </div>
           </div>
@@ -39,7 +39,7 @@ Contact | A Premium Media Company
 
 
   <!-- Start Contact -->
-  <section class="container py-5">
+  <section class="container py-5" data-aos="zoom-in" data-aos-duration="2000">
 
       <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Create success campaign with us!</h1>
       <h2 class="col-12 col-xl-8 h4 text-left regular-400">Elit, sed do eiusmod tempor </h2>
@@ -94,56 +94,105 @@ Contact | A Premium Media Company
 
           <!-- Start Contact Form -->
           <div class="col-lg-8 ">
-              <form class="contact-form row" method="post" action="#" role="form">
-
+                @if (Session::has('message_sent'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('message_sent')}}
+                        <a href="" class="close">&times;</a>
+                    </div> 
+                @endif
+              <form class="contact-form row" method="post" action="{{route('contact.send')}}" role="form">
+                @csrf
                   <div class="col-lg-6 mb-4">
                       <div class="form-floating">
-                          <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="inputname" placeholder="Name">
-                          <label for="floatingname light-300">Name</label>
+                          <input type="text" class="form-control form-control-lg light-300 @error('name') is-invalid @enderror" id="floatingname" name="name" placeholder="Name" required="">
+                          <label for="floatingname light-300">Name <span class="text-danger">*</span></label>
+                          <span class="text-danger">
+                            @error('name')
+                                <p class="text-danger">{{$message}}</p> 
+                            @enderror
+                        </span>  
                       </div>
                   </div>
                   <!-- End Input Name -->
 
                   <div class="col-lg-6 mb-4">
                       <div class="form-floating">
-                          <input type="text" class="form-control form-control-lg light-300" id="floatingemail" name="inputemail" placeholder="Email">
-                          <label for="floatingemail light-300">Email</label>
+                          <input type="email" class="form-control form-control-lg light-300 @error('email') is-invalid @enderror" id="floatingemail" name="email" placeholder="Email" required="">
+                          <label for="floatingemail light-300">Email <span class="text-danger">*</span></label>
+                          <span class="text-danger">
+                            @error('email')
+                                <p class="text-danger">{{$message}}</p> 
+                            @enderror
+                        </span>  
                       </div>
                   </div>
                   <!-- End Input Email -->
 
                   <div class="col-lg-6 mb-4">
                       <div class="form-floating">
-                          <input type="text" class="form-control form-control-lg light-300" id="floatingphone" name="inputphone" placeholder="Phone">
-                          <label for="floatingphone light-300">Phone</label>
+                          <input type="text" class="form-control form-control-lg light-300 @error('phone') is-invalid @enderror" id="floatingphone" name="phone" placeholder="Phone">
+                          <label for="floatingphone light-300">Phone <span class="text-danger">*</span></label>
+                          <span class="text-danger">
+                            @error('phone')
+                                <p class="text-danger">{{$message}}</p> 
+                            @enderror
+                        </span> 
                       </div>
                   </div>
                   <!-- End Input Phone -->
 
                   <div class="col-lg-6 mb-4">
                       <div class="form-floating">
-                          <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="inputcompany" placeholder="Company Name">
+                          <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="company_name" placeholder="Company Name">
                           <label for="floatingcompany light-300">Company Name</label>
                       </div>
                   </div>
                   <!-- End Input Company Name -->
 
-                  <div class="col-12">
-                      <div class="form-floating mb-4">
-                          <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="inputsubject" placeholder="Subject">
-                          <label for="floatingsubject light-300">Subject</label>
+                  <div class="col-lg-6 mb-4">
+                      <div class="form-floating">
+                          <input type="text" class="form-control form-control-lg light-300 @error('address') is-invalid @enderror" id="floatingcompany" name="address" placeholder="Address">
+                          <label for="floatingcompany light-300">Address <span class="text-danger">*</span></label>
                       </div>
                   </div>
-                  <!-- End Input Subject -->
+                  <!-- End Input Company Name -->
 
                   <div class="col-12">
                       <div class="form-floating mb-3">
-                          <textarea class="form-control light-300" rows="8" placeholder="Message" id="floatingtextarea"></textarea>
-                          <label for="floatingtextarea light-300">Message</label>
+                          <textarea class="form-control light-300 @error('content') is-invalid @enderror" rows="8" placeholder="Message" id="floatingtextarea" name="content"></textarea>
+                          <label for="floatingtextarea light-300">Message <span class="text-danger">*</span></label>
+                          <span class="text-danger">
+                            @error('content')
+                                <p class="text-danger">{{$message}}</p> 
+                            @enderror
+                        </span> 
                       </div>
                   </div>
                   <!-- End Textarea Message -->
 
+                  <div class="col-md-6 col-sm-6 col-xs-12 mt-3">
+                    <div class="single-input-field{{$errors->has('captcha') ? 'has-error' : ''}}">
+                        <div class="captcha">
+                            <span>{!! captcha_img('flat') !!}</span>
+                            <button class="btn btn-sm btn-refresh" type="button">Refresh</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 mt-3">
+                    <div class="single-input-field">
+                        <input type="text" class="form-control form-control-lg light-300" id="captcha" name="captcha" placeholder="Type What You See" required="">
+                        @if ($errors->has('captcha'))
+                        <span class="text-danger">
+                            @error('message')
+                                <p class="text-danger">{{$message}} {{$errors->first('captcha')}}</p> 
+                            @enderror
+                        </span> 
+                        @endif
+                    </div>
+                    <br>
+                </div>
+                
                   <div class="col-md-12 col-12 m-auto text-end">
                       <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Send Message</button>
                   </div>

@@ -21,13 +21,13 @@ About | A Premium Media Company
     <section class="bg-light w-100">
         <div class="container">
             <div class="row d-flex align-items-center py-5">
-                <div class="col-lg-6 text-start">
+                <div class="col-lg-6 text-start" data-aos="zoom-out-left" data-aos-duration="2000">
                     <h1 class="h2 py-5 text-primary typo-space-line">About Us</h1>
                     <p class="light-300">
                         For the past 80 years, New Wave Media and its family of publications and websites has been committed to bringing largest audience to our clients in the maritime, underwater science and offshore energy industries.
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="zoom-out-right" data-aos-duration="2000">
                     <img src="{{asset('frontend/img/banner-img-02.svg')}}">
                 </div>
             </div>
@@ -37,7 +37,7 @@ About | A Premium Media Company
 
 
     <!-- Start Team Member -->
-    <section class="container py-5">
+    <section class="container py-5" data-aos="zoom-in" data-aos-duration="2000">
         <div class="pt-5 pb-3 d-lg-flex align-items-center gx-5">
 
             <div class="col-lg-3">
@@ -76,7 +76,7 @@ About | A Premium Media Company
     <!-- End Team Member -->
 
     <!-- Start Aim -->
-    <section class="banner-bg bg-light py-5">
+    <section class="banner-bg bg-light py-5" data-aos="zoom-in" data-aos-duration="2000">
         <div class="container my-4">
             <div class="row text-center">
 
@@ -116,7 +116,7 @@ About | A Premium Media Company
     <!-- End Aim -->
 
     <!-- Start Contact -->
-    <section class="banner-bg bg-white py-5">
+    <section class="banner-bg bg-white py-5" data-aos="fade-in" data-aos-duration="2000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-4 p-3">
