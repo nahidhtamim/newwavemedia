@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('publications', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('image');
-            $table->text('description_top');
-            $table->text('description_bottom')->nullable();
-            $table->string('youtube_video')->nullable();
+            $table->text('bottom_text')->nullable();
+            $table->string('link')->default('#');
             $table->string('slug')->unique();
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publications');
+        Schema::dropIfExists('sliders');
     }
 };

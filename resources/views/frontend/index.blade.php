@@ -34,23 +34,25 @@ Home | A Premium Media Company
                     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-image: url('{{asset('frontend/img/sliders/pexels-cup-of-couple-6177632.jpg')}}');">
+                    @foreach ($sliders as $slider)
+                        <div class="carousel-item @if($slider->id == 1) active @endif" style="background-image: url('{{asset('uploads/sliders/'.$slider->image)}}');">
 
-                        <div class="py-5 row d-flex align-items-center">
-                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
-                                <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
-                                    Develop <strong>Strategies</strong> for 
-                                  <br>your business
-                              </h1>
-                                <p class="banner-body py-3 mx-0 px-0">
-                                    For the past 80 years, New Wave Media and its family of publications and websites has been committed to bringing largest audience to our clients in the maritime, underwater science and offshore energy industries. 
-                              </p>
-                                <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#" role="button">Get Started</a>
+                            <div class="py-5 row d-flex align-items-center">
+                                <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                    <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
+                                        {{$slider->title}}
+                                    </h1>
+                                    <p class="banner-body py-3 mx-0 px-0">
+                                        {!!$slider->bottom_text!!}
+                                </p>
+                                    <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="{{$slider->link}}" role="button">Learn More</a>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
-                    <div class="carousel-item" style="background-image: url('{{asset('frontend/img/sliders/pexels-karolina-grabowska-4491446.jpg')}}');">
+                        </div>
+                    @endforeach
+                    
+                    {{-- <div class="carousel-item" style="background-image: url('{{asset('frontend/img/sliders/pexels-karolina-grabowska-4491446.jpg')}}');">
 
                         <div class="py-5 row d-flex align-items-center">
                             <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
@@ -81,7 +83,7 @@ Home | A Premium Media Company
                             </div>
                         </div>
 
-                    </div>
+                    </div> --}}
                 </div>
                 <a class="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                     <i class='bx bx-chevron-left'></i>

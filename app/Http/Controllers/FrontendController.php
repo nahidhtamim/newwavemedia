@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Digital;
 use App\Models\Publication;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index(){
         $publications = Publication::all();
+        $sliders = Slider::all();
         $digitals = Digital::get()->take(3);
-        return view('frontend.index', compact('publications', 'digitals'));
+        return view('frontend.index', compact('publications', 'digitals', 'sliders'));
     }
 
     public function about(){

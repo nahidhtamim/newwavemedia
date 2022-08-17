@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DigitalsController;
 use App\Http\Controllers\FrontendController;
@@ -40,7 +41,7 @@ Route::group(['middleware' => ['auth','isAdmin','verified']], function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index']);
  
-    // Services Routes
+    // Publications Routes
     Route::get('/admin-publications', [PublicationsController::class, 'index']);
     Route::post('/add-publication',[PublicationsController::class,'add_publication']);
     Route::get('/edit-publication/{slug}', [PublicationsController::class, 'edit_publication']);
@@ -48,13 +49,20 @@ Route::group(['middleware' => ['auth','isAdmin','verified']], function () {
     Route::get('/delete-publication/{slug}', [PublicationsController::class, 'delete_publication']);
 
 
-    // Services Routes
+    // Digitals Routes
     Route::get('/admin-digitals', [DigitalsController::class, 'index']);
     Route::post('/add-digital',[DigitalsController::class,'add_digital']);
     Route::get('/edit-digital/{slug}', [DigitalsController::class, 'edit_digital']);
     Route::post('/update-digital/{slug}', [DigitalsController::class, 'update_digital']);
     Route::get('/delete-digital/{slug}', [DigitalsController::class, 'delete_digital']);
 
+
+    // Sliders Routes
+    Route::get('/admin-sliders', [SliderController::class, 'index']);
+    Route::post('/add-slider',[SliderController::class,'add_slider']);
+    Route::get('/edit-slider/{slug}', [SliderController::class, 'edit_slider']);
+    Route::post('/update-slider/{slug}', [SliderController::class, 'update_slider']);
+    Route::get('/delete-slider/{slug}', [SliderController::class, 'delete_slider']);
 
     // Services Routes
     // Route::get('/services', [PublicationsController::class, 'index']);
