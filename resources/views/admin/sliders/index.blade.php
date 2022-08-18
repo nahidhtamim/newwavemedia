@@ -60,7 +60,9 @@ Dashboard | A Premium Media Company
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{url('/edit-slider/'.$slider->slug)}}" class="btn btn-primary">Edit</a>
+                                        @if($slider->id != 1)
                                         <a href="{{url('/delete-slider/'.$slider->slug)}}" class="btn btn-danger">Delete</a>
+                                        @endif
                                     </div>
                                 </td>
                             </tr>
