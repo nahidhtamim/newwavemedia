@@ -156,7 +156,7 @@ Home | A Premium Media Company
     <!-- End Service -->
 
     <!-- Start View Work -->
-    <section class="bg-secondary" data-aos="fade-in"
+    {{-- <section class="bg-secondary banner" data-aos="fade-in"
     data-aos-duration="2000">
         <div class="container py-5">
             <div class="row d-flex justify-content-center text-center">
@@ -172,15 +172,15 @@ Home | A Premium Media Company
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End View Work -->
 
     <!-- Start Recent Work -->
-    <section class="py-5 mb-5" data-aos="zoom-in"
-    data-aos-duration="2000">
+    <section class="py-5" data-aos="zoom-in"
+    data-aos-duration="2000" style="background-color: #0d2e622c">
         <div class="container">
             <div class="recent-work-header row text-center pb-5">
-                <h2 class="col-md-3 m-auto h2 semi-bold-600 py-5">Our Concerns</h2>
+                <h2 class="col-md-3 m-auto h2 semi-bold-600 py-5">Digital Media</h2>
             </div>
             <div class="row gy-5 g-lg-5 mb-4">
 

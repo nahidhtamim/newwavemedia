@@ -76,14 +76,12 @@ a {
 
 /* Home */
 
-
-/* #index_banner {
-  background-image: url('./../img/banner-bg-01.jpg');
-  background-position: center center; background-size: cover;
-  height: 100%;
-  min-height: 60vh;
-  width: 100%;
-} */
+.banner {
+    background-image: url('./../img/banner-bg-01.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+}
 
 #index_banner .carousel-item {
     min-height: 60vh;
@@ -177,7 +175,7 @@ a {
 /* About */
 
 #work_banner {
-    background-image: url('./../img/banner-bg-02.jpg');
+    background-image: url('./../img/banner-bg-02.png');
     background-position: center center;
     background-size: cover;
     height: 100%;
@@ -194,13 +192,13 @@ a {
 }
 
 .partner-wap {
-    background-color: #7276ec;
+    background-color: #0d2e62;
     transition: 1s;
     cursor: pointer;
 }
 
 .partner-wap:hover {
-    background-color: #b1b3f5;
+    background-color: #20385e;
 }
 
 .why-us {
@@ -226,7 +224,7 @@ a {
 /* Singel Work */
 
 #work_single_banner {
-    background-image: url('./../img/banner-bg-02.jpg');
+    background-image: url('./../img/banner-bg-02.png');
     background-position: center center;
     background-size: cover;
     height: 100%;

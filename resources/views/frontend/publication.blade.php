@@ -72,6 +72,9 @@
         </div><!-- End Video -->
     </section>
     <!-- End Work Sigle -->
-
+    <div class="text-center py-5" role="group" aria-label="First group">
+        <a class="btn btn-secondary rounded-pill btn-block shadow px-4 py-2 text-white" href="">Read Latest Edition</a>
+        <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="">Download Media Kit</a>
+    </div>
 
 @endsection
