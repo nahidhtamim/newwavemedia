@@ -43,7 +43,7 @@ About | A Premium Media Company
             <div class="col-lg-3">
                 <h2 class="h2 py-5 typo-space-line">Our Team</h2>
                 <p class="text-muted light-300">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    New Wave Media’s advertising specialists will help you develop a multi-platform marketing initiative to grow your business.
                 </p>
             </div>
 

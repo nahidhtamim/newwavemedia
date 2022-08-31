@@ -23,10 +23,10 @@ Contact | A Premium Media Company
       <div class="container py-4">
           <div class="row align-items-center justify-content-between">
               <div class="contact-header col-lg-4" data-aos="zoom-out-left" data-aos-duration="2000">
-                  <h1 class="h2 pb-3 text-primary">Contact</h1>
-                  <h3 class="h4 regular-400">Elit, sed do eiusmod tempor</h3>
+                  <h1 class="h2 pb-3 text-primary">Contact Us</h1>
                   <p class="light-300">
-                      Vector illustration is from Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                    New Wave Media int’l has been providing multiplatform advertising solutions to a diverse range
+                    of industries for over 85 years.
                   </p>
               </div>
               <div class="contact-img col-lg-5 align-items-end col-md-4" data-aos="zoom-out-right" data-aos-duration="2000">
@@ -41,10 +41,12 @@ Contact | A Premium Media Company
   <!-- Start Contact -->
   <section class="container py-5" data-aos="zoom-in" data-aos-duration="2000">
 
-      <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Create success campaign with us!</h1>
-      <h2 class="col-12 col-xl-8 h4 text-left regular-400">Elit, sed do eiusmod tempor </h2>
+      <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">We want to hear from you!</h1>
+      <h2 class="col-12 col-xl-8 h4 text-left regular-400">Contact us today to learn about our advertising solutions</h2>
       <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
-          Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+        New Wave Media is the premier media company serving the Commercial Maritime, Shallow
+        Draft Workboat, Underwater Science, and Offshore Energy Industries. We look forward to
+        hearing from you
       </p>
 
       <div class="row pb-4">
@@ -57,9 +59,9 @@ Contact | A Premium Media Company
                       </div>
                   </div>
                   <ul class="contact-info list-unstyled col-lg-9 col-9  light-300">
-                      <li class="h5 mb-0">Media Contact</li>
-                      <li class="text-muted">Mr. John Doe</li>
-                      <li class="text-muted">010-020-0340</li>
+                      <li class="h5 mb-0">Advertising Contact</li>
+                      <li class="text-muted">Mr. Terry Breese</li>
+                      <li class="text-muted">+1-561-732-1185</li>
                   </ul>
               </div>
 
@@ -70,9 +72,9 @@ Contact | A Premium Media Company
                       </div>
                   </div>
                   <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
-                      <li class="h5 mb-0">Technical Contact</li>
-                      <li class="text-muted">Mr. John Stiles</li>
-                      <li class="text-muted">010-020-0340</li>
+                      <li class="h5 mb-0">Editorial Contact</li>
+                      <li class="text-muted">Mr. Greg Trauthwein</li>
+                      <li class="text-muted">+1-212-477-6700</li>
                   </ul>
               </div>
 
@@ -84,8 +86,8 @@ Contact | A Premium Media Company
                   </div>
                   <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
                       <li class="h5 mb-0">Billing Contact</li>
-                      <li class="text-muted">Mr. Richard Miles</li>
-                      <li class="text-muted">010-020-0340</li>
+                      <li class="text-muted">Ms. Esther Rothenberger</li>
+                      <li class="text-muted">+1-212-477-6700</li>
                   </ul>
               </div>
 

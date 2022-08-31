@@ -103,6 +103,7 @@ a {
 #index_banner .carousel-indicators li,
 #index_banner .carousel-indicators.active {
     background-color: #be4839 !important;
+    color: #fff;
 }
 
 .service-wrapper .service-footer {

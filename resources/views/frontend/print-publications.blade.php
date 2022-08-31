@@ -20,12 +20,11 @@ Print Publications | A Premium Media Company
    <div id="work_banner" class="banner-wrapper bg-light w-100 py-5" data-aos="fade-in" data-aos-duration="2000">
       <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
           <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
-              <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Our Work</h1>
-              {{-- <h3 class="h4 pb-2 regular-400">Elit, sed do eiusmod tempor incididunt</h3>
+              <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Print Publications</h1>
+              <h3 class="h4 pb-2 regular-400">Only New Wave Media has the largest audience</h3>
               <p class="banner-body pb-2 light-300">
-                  Vector illustration <a class="text-white" href="http://freepik.com/" target="_blank">Freepik</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                  suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
-              </p> --}}
+                New Wave Media’s diverse range of publications reach more B2B buyers and specifiers in the Commercial Maritime, Shallow Draft Workboat,Underwater Science, and Offshore Energy Industries than any other publications.
+              </p>
               <button type="button" class="btn rounded-pill btn-primary text-light px-4 light-300" href="{{url('/contact')}}">Contact Us</button>
           </div>
       </div>
@@ -44,15 +43,17 @@ Print Publications | A Premium Media Company
           </div>
       </div> --}}
 
-      <div class="row services gx-lg-5">
+      <div class="row services gx-lg-5 text-center">
         @foreach ($publications as $publication)
-          <a href="{{url('/publication/'.$publication->slug)}}" class="col-sm-6 col-lg-6 text-decoration-none service maritime">
+          <a href="{{url('/publication/'.$publication->slug)}}" class="col-sm-6 col-lg-3 text-decoration-none service maritime py-2">
               <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
                   <img class="card-img-top" src="{{asset('/uploads/publication_images/'.$publication->image)}}" alt="...">
                   <div class="card-body">
-                      <h5 class="card-title light-300 text-dark">{{$publication->description_top}}</h5>
-                      <p class="card-text light-300 text-dark">
+                      <h5 class="card-title light-300 text-dark">
                         {{$publication->title}}
+                       </h5>
+                      <p class="card-text light-300 text-dark">
+                        {!! Str::words($publication->description_top, 1, ' ...') !!}
                       </p>
                       <span class="text-decoration-none text-primary light-300">
                             Read more <i class='bx bxs-hand-right ms-1'></i>

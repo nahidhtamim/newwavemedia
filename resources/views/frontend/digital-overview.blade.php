@@ -21,11 +21,9 @@ Digital Overview | A Premium Media Company
       <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
           <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
               <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Digital Media</h1>
-              {{-- <h3 class="h4 pb-2 regular-400">Elit, sed do eiusmod tempor incididunt</h3>
-              <p class="banner-body pb-2 light-300">
-                  Vector illustration <a class="text-white" href="http://freepik.com/" target="_blank">Freepik</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                  suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
-              </p> --}}
+              <h3 class="h4 pb-2 regular-400">Only New Wave Media has the largest audience</h3>
+              <p class="banner-body pb-2 light-300">Through our vast multi-channel cross platformed network of websites, online publications ,e-news services, mobile apps, webinars, TV and more, our global audience is unsurpassed with an average monthly reach of over 1.5 million pageviews. Our network gives you the ability to optimize your campaign and market to relevant segments and a highly targeted global audience.
+              </p>
               <button type="button" class="btn rounded-pill btn-primary text-light px-4 light-300" href="{{url('/contact')}}">Contact Us</button>
           </div>
       </div>
