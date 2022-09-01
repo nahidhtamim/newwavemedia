@@ -43,6 +43,7 @@ Dashboard | A Premium Media Company
                             <th>Image</th>
                             <th>Description</th>
                             <th>link</th>
+                            <th>File</th>
                             <th>Slug</th>
                             <th>Actions</th>
                         </tr>
@@ -53,9 +54,10 @@ Dashboard | A Premium Media Company
                             <tr>
                                 <td>{{$i++;}}</td>
                                 <td>{{$digital->title}}</td>
-                                <td><img src="/uploads/digital_images/{{$digital->image}}" alt="" height="350px"></td>
+                                <td><img src="/uploads/digital_images/{{$digital->image}}" alt="" height="200px"></td>
                                 <td>{!!$digital->description!!}</td>
                                 <td>{!!$digital->link!!}</td>
+                                <td>{{$digital->pdf}}</td>
                                 <td>{{$digital->slug}}</td>
                                 <td>
                                     <div class="btn-group">
@@ -87,6 +89,9 @@ Dashboard | A Premium Media Company
                     <div class="modal-body">
                         <form class="user" action="{{url('/add-digital')}}" method="POST" enctype="multipart/form-data">
                             @csrf
+                            <div class="row">
+
+                            
                             <div class="col-12 mb-3 mb-sm-0">
                                 <label for="title" class="text-primary"> <b>Title <span class="text-danger">*</span></b> </label>
                                 <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" id="title"
@@ -132,8 +137,15 @@ Dashboard | A Premium Media Company
                                 <br>
                             </div>
                             <div class="col-12 mb-3 mb-sm-0">
+                                <label for="pdf" class="text-primary"> <b>Docs</b>
+                                </label>
+                                <input type="file" name="pdf" class="form-control" id="image">
+                                <br>
+                            </div>
+                            <div class="col-12 mb-3 mb-sm-0">
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div>
+                        </div>
                         </form>
                     </div>
                 </div>

@@ -16,6 +16,7 @@ class Digital extends Model
         'image',
         'description',
         'link',
+        'pdf',
         'slug',
     ];
 }

@@ -44,6 +44,8 @@ Dashboard | A Premium Media Company
                             <th>Description Ttop</th>
                             <th>Description Bottom</th>
                             <th>Youtube Video</th>
+                            <th>Link</th>
+                            <th>File</th>
                             <th>Slug</th>
                             <th>Actions</th>
                         </tr>
@@ -54,10 +56,12 @@ Dashboard | A Premium Media Company
                             <tr>
                                 <td>{{$i++;}}</td>
                                 <td>{{$publication->title}}</td>
-                                <td><img src="/uploads/publication_images/{{$publication->image}}" alt="" height="300px"></td>
+                                <td><img src="/uploads/publication_images/{{$publication->image}}" alt="" height="200px"></td>
                                 <td>{!!$publication->description_top!!}</td>
                                 <td>{!!$publication->description_bottom!!}</td>
                                 <td>{!!$publication->youtube_video!!}</td>
+                                <td>{{$publication->link}}</td>
+                                <td>{{$publication->pdf}}</td>
                                 <td>{{$publication->slug}}</td>
                                 <td>
                                     <div class="btn-group">
@@ -81,7 +85,7 @@ Dashboard | A Premium Media Company
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Print Publications</h5>
+                        <h5 class="modal-title text-primary" id="exampleModalLabel">Add Print Publications</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -128,6 +132,12 @@ Dashboard | A Premium Media Company
                                 <br>
                             </div>
                             <div class="col-12 mb-3 mb-sm-0">
+                                <label for="link" class="text-primary"> <b>Website Link</b> </label>
+                                <input type="text" name="link" class="form-control" id="link"
+                                    placeholder="Website Link">
+                                <br>
+                            </div>
+                            <div class="col-12 mb-3 mb-sm-0">
                                 <label for="slug" class="text-primary"> <b>Slug</b> </label>
                                 <input type="text" name="slug" class="form-control @error('slug') is-invalid @enderror" id="slug"
                                     placeholder="Slug">
@@ -144,6 +154,13 @@ Dashboard | A Premium Media Company
                                 </label>
                                 
                                 <input type="file" name="image" class="form-control" id="image" accept="image/*">
+                                <br>
+                            </div>
+                            <div class="col-12 mb-3 mb-sm-0">
+                                <label for="pdf" class="text-primary"> <b>Docs</b>
+                                </label>
+                                
+                                <input type="file" name="pdf" class="form-control" id="pdf">
                                 <br>
                             </div>
                             <div class="col-12 mb-3 mb-sm-0">

@@ -79,7 +79,7 @@
                 <div class="row pt-2">
                     <div class="col-lg-12 col-sm-12 text-center">
                         <p class="text-center text-light light-300">
-                            © Copyright 2022 New Wave Media. All Rights Reserved.
+                            © Copyright {{ now()->year }} New Wave Media. All Rights Reserved.
                         </p>
                     </div>
                 </div>

@@ -55,7 +55,7 @@
 
         <div class="text-center py-5" role="group" aria-label="First group">
             <a class="btn btn-secondary rounded-pill btn-block shadow px-4 py-2 text-white" href="{{$digital->link}}">Visit Website</a>
-            <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="{{$digital->link}}">Download Media Kit</a>
+            <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="/uploads/digital_pdf/{{$digital->pdf}}">Download Media Kit</a>
         </div>
     </section>
     <!-- End Work Sigle -->

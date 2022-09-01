@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('image');
             $table->text('description')->nullable();
             $table->string('link');
+            $table->string('pdf')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
         });

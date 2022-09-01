@@ -20,6 +20,8 @@ return new class extends Migration
             $table->text('description_top');
             $table->text('description_bottom')->nullable();
             $table->string('youtube_video')->nullable();
+            $table->string('link')->nullable();
+            $table->string('pdf')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
         });

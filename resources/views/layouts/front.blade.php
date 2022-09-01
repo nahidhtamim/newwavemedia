@@ -10,6 +10,7 @@
     <!-- Load Require CSS -->
     <link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet">
     <!-- Font CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <link href="{{asset('frontend/css/boxicon.min.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Data Aos CSS -->

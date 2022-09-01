@@ -47,28 +47,43 @@ About | A Premium Media Company
                 </p>
             </div>
 
-            <div class="col-lg-9 row">
+            <div class="col-lg-9 row d-flex justify-content-center">
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team-01.jpg')}}" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team/terry-breese.jpg')}}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>John Doe</li>
-                        <li>Business Development</li>
+                        <li><b>Terry Breese</b></li>
+                        <li>Vice President of Sales</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team-02.jpg')}}" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team/john-cagni.jpg')}}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Jane Doe</li>
-                        <li>Media Development</li>
+                        <li><b>John Cagni</b></li>
+                        <li>Advertising Sales Manager</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team-03.jpg')}}" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team/lucia-annunziata.jpg')}}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Sam</li>
-                        <li>Developer</li>
+                        <li><b>Lucia Annunziata</b></li>
+                        <li>Advertising Sales Manager</li>
                     </ul>
                 </div>
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team/mike-kozlowski.jpg')}}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li><b>Mike Kozlowski</b></li>
+                        <li>Advertising Sales Manager</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{asset('frontend/img/team/frank-covella.jpg')}}" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li><b>Frank Covella</b></li>
+                        <li>Advertising Sales Manager</li>
+                    </ul>
+                </div>
+                
             </div>
 
         </div>
@@ -82,31 +97,31 @@ About | A Premium Media Company
 
                 <div class="objective col-lg-4">
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                        <i class="display-4 bx bxs-bulb text-light"></i>
+                        <i class="display-4 fa-solid fa-globe text-light"></i>
                     </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Vision</h2>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">1,625,082</h2>
                     <p class="light-300">
-                        Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse commodo viverra.
+                        AVERAGE MONTHLY NETWORK PAGEVIEWS
                     </p>
                 </div>
 
                 <div class="objective col-lg-4 mt-sm-0 mt-4">
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                        <i class='display-4 bx bx-revision text-light'></i>
+                        <i class="display-4 fa-solid fa-book text-light"></i>
                     </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Mission</h2>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">137,618</h2>
                     <p class="light-300">
-                        Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis.
+                        AVERAGE MONTHLY MAGAZINE CIRCULATION
                     </p>
                 </div>
 
                 <div class="objective col-lg-4 mt-sm-0 mt-4">
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                        <i class="display-4 bx bxs-select-multiple text-light"></i>
+                        <i class="display-4 fa-brands fa-google-play text-light"></i>
                     </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Goal</h2>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">91,335</h2>
                     <p class="light-300">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                        APP DOWNLOADS
                     </p>
                 </div>
 
@@ -116,7 +131,7 @@ About | A Premium Media Company
     <!-- End Aim -->
 
     <!-- Start Contact -->
-    <section class="banner-bg bg-white py-5" data-aos="fade-in" data-aos-duration="2000">
+    {{-- <section class="banner-bg bg-white py-5" data-aos="fade-in" data-aos-duration="2000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-4 p-3">
@@ -132,7 +147,7 @@ About | A Premium Media Company
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End Contact -->
 
 

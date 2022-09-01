@@ -31,9 +31,13 @@
             </h6>
         </div>
         <div class="card-body">
+            
+
+           
             <form class="user" action="{{url('/update-publication/'.$publication->slug)}}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="col-12 mb-3 mb-sm-0">
+                <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
                     <label for="title" class="text-primary"> <b>Title <span class="text-danger">*</span></b> </label>
                     <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" id="title"
                         value="{{$publication->title}}">
@@ -44,7 +48,13 @@
                     </span>
                     <br>
                 </div>
-                <div class="col-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
+                    <label for="youtube_video" class="text-primary"> <b>Youtube Video</b> </label>
+                    <input type="text" name="youtube_video" class="form-control" id="youtube_video"
+                        value="{{$publication->youtube_video}}">
+                    <br>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="description_top" class="text-primary"> <b>Top Description <span class="text-danger">*</span></b> </label>
                     <textarea name="description_top" rows="2" id="textarea"
                         class="form-control text-left @error('description_top') is-invalid @enderror">
@@ -55,7 +65,7 @@
                     @enderror
                     <br>
                 </div>
-                <div class="col-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="description_bottom" class="text-primary"> <b>Bottom Description</b> </label>
                     <textarea name="description_bottom" rows="2" id="textarea_two"
                         class="form-control text-left">
@@ -63,34 +73,46 @@
                     </textarea>
                     <br>
                 </div>
-                <div class="col-12 mb-3 mb-sm-0">
-                    <label for="youtube_video" class="text-primary"> <b>Youtube Video</b> </label>
-                    <input type="text" name="youtube_video" class="form-control" id="youtube_video"
-                        value="{{$publication->youtube_video}}">
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
+                    <label for="link" class="text-primary"> <b>Website Link</b> </label>
+                    <input type="text" name="link" class="form-control" id="link"
+                    value="{{$publication->link}}">  
                     <br>
                 </div>
-                <div class="col-12 mb-3 mb-sm-0">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
                     <label for="slug" class="text-primary"> <b>Slug</b> </label>
                     <input type="text" name="slug" class="form-control @error('slug') is-invalid @enderror" id="slug"
-                    value="{!!$publication->slug!!}">
+                    value="{{$publication->slug}}">
                     @error('slug')
                         <p class="text-danger">{{$message}}</p> 
                     @enderror    
                     <br>
                 </div>
-                <div class="col-12 mb-3 mb-sm-0">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
                     <label for="image" class="text-primary"> <b>Image</b> <span class="text-danger">*</span> 
                         <small>[Use Image of Size 800*800px]</small> 
                     </label>
                     <input type="file" name="image" class="form-control" id="image" accept="image/*">
                     <br>
-                    <img src="/uploads/publication_images/{{$publication->image}}" alt="" height="350px" width="auto" style="border: 5px solid #113476; border-radius: 15px; margin-bottom: 25px;">
+                    <img src="/uploads/publication_images/{{$publication->image}}" alt="" height="200px" width="auto" style="border: 5px solid #113476; border-radius: 15px; margin-bottom: 25px;">
                     <br>
                 </div>
-                <div class="col-12 mb-3 mb-sm-0">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
+                    <label for="pdf" class="text-primary"> <b>Docs</b>
+                    </label>
+                    <input type="file" name="pdf" class="form-control" id="pdf">
+                    <br>
+                    {{-- <iframe src="/uploads/publication_pdf/{{$publication->pdf}}" frameborder="0" height="200px" width="auto" style="border: 5px solid #113476; border-radius: 15px; margin-bottom: 25px;"></iframe> --}}
+                    <embed src="/uploads/publication_pdf/{{$publication->pdf}}" style="height:30vh; width:100%; border: 5px solid #113476; border-radius: 15px; margin-bottom: 25px;" />
+                    <br>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mb-sm-0">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
+            </div>
             </form>
+        
         </div>
     </div>
 </div>

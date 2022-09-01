@@ -17,6 +17,8 @@ class Publication extends Model
         'description_top',
         'description_bottom',
         'youtube_video',
+        'link',
+        'pdf',
         'slug',
     ];
 }

@@ -33,6 +33,12 @@ class DigitalsController extends Controller
             $digital->image = $filename;
             // $digital->save();
         }
+        if ($request->hasFile('pdf')) {
+            $pdf = $request->file('pdf');
+            $pdffile = time().'_'.$pdf->getClientOriginalName().'.'.$pdf->getClientOriginalExtension();
+            $request->file('pdf')->move('uploads/digital_pdf/', $pdffile);
+            $digital->pdf = $pdffile;
+        }
         $digital->save();
         return redirect()->back()->with('status', 'Digital Added Successfully'); 
     }
@@ -45,13 +51,6 @@ class DigitalsController extends Controller
 
 
     public function update_digital(Request $request, $slug){
-        $this->validate($request, array(
-            'title'=>'required',
-            'image'=>'required',
-            'description'=>'required',
-            'link'=>'max:255',
-            'slug'=>'required'
-        ));
         $digital = Digital::where('slug', $slug)->first();
         $digital->title = $request->input('title');
         $digital->description = $request->input('description');
@@ -63,6 +62,12 @@ class DigitalsController extends Controller
             Image::make($avatar)->save(public_path('/uploads/digital_images/' . $filename));
             $digital->image = $filename;
             // $digital->save();
+        }
+        if ($request->hasFile('pdf')) {
+            $pdf = $request->file('pdf');
+            $pdffile = time().'_'.$pdf->getClientOriginalName().'.'.$pdf->getClientOriginalExtension();
+            $request->file('pdf')->move('uploads/digital_pdf/', $pdffile);
+            $digital->pdf = $pdffile;
         }
         $digital->update();
         return redirect('/admin-digitals')->with('status', 'Digital Updated Successfully'); 
