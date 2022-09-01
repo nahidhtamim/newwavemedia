@@ -38,7 +38,7 @@ class PublicationsController extends Controller
         }
         if ($request->hasFile('pdf')) {
             $pdf = $request->file('pdf');
-            $pdffile = time().'_'.$pdf->getClientOriginalName().'.'.$pdf->getClientOriginalExtension();
+            $pdffile = time().'_'.$pdf->getClientOriginalName();
             $request->file('pdf')->move('uploads/publication_pdf/', $pdffile);
             $publication->pdf = $pdffile;
         }
@@ -78,7 +78,7 @@ class PublicationsController extends Controller
         }
         if ($request->hasFile('pdf')) {
             $pdf = $request->file('pdf');
-            $pdffile = time().'_'.$pdf->getClientOriginalName().'.'.$pdf->getClientOriginalExtension();
+            $pdffile = time().'_'.$pdf->getClientOriginalName();
             $request->file('pdf')->move('uploads/publication_pdf/', $pdffile);
             $publication->pdf = $pdffile;
         }

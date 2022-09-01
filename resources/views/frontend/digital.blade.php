@@ -55,7 +55,11 @@
 
         <div class="text-center py-5" role="group" aria-label="First group">
             <a class="btn btn-secondary rounded-pill btn-block shadow px-4 py-2 text-white" href="{{$digital->link}}">Visit Website</a>
+            @if ($digital->pdf != null)
             <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="/uploads/digital_pdf/{{$digital->pdf}}">Download Media Kit</a>
+            @else
+            <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="#">Download Media Kit</a>
+            @endif
         </div>
     </section>
     <!-- End Work Sigle -->

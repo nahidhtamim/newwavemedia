@@ -35,7 +35,7 @@ class DigitalsController extends Controller
         }
         if ($request->hasFile('pdf')) {
             $pdf = $request->file('pdf');
-            $pdffile = time().'_'.$pdf->getClientOriginalName().'.'.$pdf->getClientOriginalExtension();
+            $pdffile = time().'_'.$pdf->getClientOriginalName();
             $request->file('pdf')->move('uploads/digital_pdf/', $pdffile);
             $digital->pdf = $pdffile;
         }
@@ -65,7 +65,7 @@ class DigitalsController extends Controller
         }
         if ($request->hasFile('pdf')) {
             $pdf = $request->file('pdf');
-            $pdffile = time().'_'.$pdf->getClientOriginalName().'.'.$pdf->getClientOriginalExtension();
+            $pdffile = time().'_'.$pdf->getClientOriginalName();
             $request->file('pdf')->move('uploads/digital_pdf/', $pdffile);
             $digital->pdf = $pdffile;
         }

@@ -74,7 +74,11 @@
     <!-- End Work Sigle -->
     <div class="text-center py-5" role="group" aria-label="First group">
         <a class="btn btn-secondary rounded-pill btn-block shadow px-4 py-2 text-white" href="{{$publication->link}}">Read Latest Edition</a>
+        @if ($publication->pdf != null)
         <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="/uploads/publication_pdf/{{$publication->pdf}}">Download Media Kit</a>
+        @else
+        <a class="btn btn-primary rounded-pill btn-block shadow px-4 py-2 text-white" href="#">Download Media Kit</a>
+        @endif
     </div>
 
 @endsection
