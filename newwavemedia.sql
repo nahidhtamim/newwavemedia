@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2022 at 12:05 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Sep 01, 2022 at 09:37 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,6 +33,7 @@ CREATE TABLE `digitals` (
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pdf` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -42,10 +43,10 @@ CREATE TABLE `digitals` (
 -- Dumping data for table `digitals`
 --
 
-INSERT INTO `digitals` (`id`, `title`, `image`, `description`, `link`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Marine Link', '1660201074.jpg', '<p><strong>Ullamco laboris nisi ut aliquip ex</strong></p>', 'https://www.marinelink.com/', 'marine_link', '2022-08-11 00:24:30', '2022-08-11 00:57:54'),
-(2, 'Offshore Engineer', '1660199125.jpg', '<p><strong>Psum officia anim id est laborum.</strong></p>', 'https://www.oedigital.com/', 'offshore_engineer', '2022-08-11 00:25:25', '2022-08-11 00:25:25'),
-(3, 'Marine Technology News', '1660201144.jpg', '<h1>Marine Technology News</h1>\r\n<p>Sum dolor sit consencutur</p>', 'https://www.marinetechnologynews.com/', 'marine_technology_news', '2022-08-11 00:27:38', '2022-08-11 00:59:04');
+INSERT INTO `digitals` (`id`, `title`, `image`, `description`, `link`, `pdf`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'Marine Link', '1660201074.jpg', '<p><strong>Ullamco laboris nisi ut aliquip ex</strong></p>', 'https://www.marinelink.com/', NULL, 'marine_link', '2022-08-11 00:24:30', '2022-08-11 00:57:54'),
+(2, 'Offshore Engineer', '1660199125.jpg', '<p><strong>Psum officia anim id est laborum.</strong></p>', 'https://www.oedigital.com/', NULL, 'offshore_engineer', '2022-08-11 00:25:25', '2022-08-11 00:25:25'),
+(3, 'Marine Technology News', '1660201144.jpg', '<h1>Marine Technology News</h1>\r\n<p>Sum dolor sit consencutur</p>', 'https://www.marinetechnologynews.com/', NULL, 'marine_technology_news', '2022-08-11 00:27:38', '2022-08-11 00:59:04');
 
 -- --------------------------------------------------------
 
@@ -85,7 +86,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2022_08_05_091125_create_publications_table', 1),
-(6, '2022_08_05_091646_create_digitals_table', 1);
+(6, '2022_08_05_091646_create_digitals_table', 1),
+(7, '2022_08_17_114007_create_sliders_table', 2);
 
 -- --------------------------------------------------------
 
@@ -130,6 +132,8 @@ CREATE TABLE `publications` (
   `description_top` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description_bottom` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `youtube_video` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pdf` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -139,11 +143,37 @@ CREATE TABLE `publications` (
 -- Dumping data for table `publications`
 --
 
-INSERT INTO `publications` (`id`, `title`, `image`, `description_top`, `description_bottom`, `youtube_video`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Maritime Reporter', '1660133186.jpg', 'Maritime Reporter', 'Maritime Reporter', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'maritime_reporter', '2022-08-10 03:22:16', '2022-08-10 06:06:26'),
-(2, 'Marine News', '1660125333.jpg', 'Marine News', 'Marine News', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'marine_news', '2022-08-10 03:55:33', '2022-08-10 03:55:33'),
-(3, 'Offshore Engineer', '1660125374.jpg', 'Offshore Engineer', 'Offshore Engineer', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'offshore_engineer', '2022-08-10 03:56:14', '2022-08-10 03:56:14'),
-(4, 'Marine Technology Reporter', '1660125418.jpg', 'Marine Technology Reporter', 'Marine Technology Reporter', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'marine_technology_reporter', '2022-08-10 03:56:58', '2022-08-10 03:56:58');
+INSERT INTO `publications` (`id`, `title`, `image`, `description_top`, `description_bottom`, `youtube_video`, `link`, `pdf`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'Maritime Reporter', '1660133186.jpg', 'Maritime Reporter', 'Maritime Reporter', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', NULL, NULL, 'maritime_reporter', '2022-08-10 03:22:16', '2022-08-10 06:06:26'),
+(2, 'Marine News', '1660125333.jpg', 'Marine News', 'Marine News', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', NULL, NULL, 'marine_news', '2022-08-10 03:55:33', '2022-08-10 03:55:33'),
+(3, 'Offshore Engineer', '1660125374.jpg', 'Offshore Engineer', 'Offshore Engineer', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', NULL, NULL, 'offshore_engineer', '2022-08-10 03:56:14', '2022-08-10 03:56:14'),
+(4, 'Marine Technology Reporter', '1660125418.jpg', 'Marine Technology Reporter', 'Marine Technology Reporter', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5acT2_xWXU0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', NULL, NULL, 'marine_technology_reporter', '2022-08-10 03:56:58', '2022-08-10 03:56:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sliders`
+--
+
+CREATE TABLE `sliders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bottom_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '#',
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sliders`
+--
+
+INSERT INTO `sliders` (`id`, `title`, `image`, `bottom_text`, `link`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'The Most Powerful Advertising Platform in the Industry', '1660737739.jpg', 'Drive audience and build brand-awareness with New Wave Media’s family of publications, websites,\r\nvideos and social media. Reach audiences around the world with curated multiplatform marketing\r\ninitiatives.', '{{url(\'/about\')}}', 'the_most_powerful_advertising_platform_in_the_industry', NULL, NULL),
+(2, 'Reach Audiences in Every Sector', '1660737928.jpg', 'Our specialized industry specific websites feature relevant news, information and analysis, that target\r\nspecific sectors within the maritime and offshore industries. Allowing you to choose the audience you\r\nwant.', '{{url(\'/digital-overview\')}}', 'reach_audiences_in_every_sector', NULL, NULL),
+(3, '100% Audited Publications', '1660738076.jpg', 'New Wave Media is proud to have all of its printed publications audited by the BPA Audit Bureau. This\r\nguarantees our advertisers that we are reaching the most current, relevant printed audience.', '{{url(\'/print-publications\')}}', '100_audited_publications', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -220,6 +250,13 @@ ALTER TABLE `publications`
   ADD UNIQUE KEY `publications_slug_unique` (`slug`);
 
 --
+-- Indexes for table `sliders`
+--
+ALTER TABLE `sliders`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `sliders_slug_unique` (`slug`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -246,7 +283,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -259,6 +296,12 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `publications`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `sliders`
+--
+ALTER TABLE `sliders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -11,7 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="apple-touch-icon" href="{{asset('frontend/img/fav.ico')}}">
+    <link rel="apple-touch-icon" href="{{asset('frontend/img/favicon.ico')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/fav.ico')}}">
     
     <title>New Wave Media</title>

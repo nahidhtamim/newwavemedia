@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="apple-touch-icon" href="{{asset('frontend/img/fav.ico')}}">
+    <link rel="apple-touch-icon" href="{{asset('frontend/img/favicon.ico')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/fav.ico')}}">
     
     <title>@yield('title')</title>
