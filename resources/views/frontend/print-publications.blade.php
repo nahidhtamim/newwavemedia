@@ -45,7 +45,7 @@ Print Publications | A Premium Media Company
 
       <div class="row services gx-lg-5 text-center">
         @foreach ($publications as $publication)
-          <a href="{{url('/publication/'.$publication->slug)}}" class="col-sm-6 col-lg-3 text-decoration-none service maritime py-2">
+          <a href="{{url('/publication/'.$publication->slug)}}" class="col-sm-6 col-md-6 col-lg-3 text-decoration-none service maritime py-2">
               <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
                   <img class="card-img-top" src="{{asset('/uploads/publication_images/'.$publication->image)}}" alt="...">
                   <div class="card-body">

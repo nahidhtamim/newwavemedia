@@ -40,7 +40,7 @@
             <div class="worksingle-content col-lg-8 m-auto text-left justify-content-center">
                 <h2 class="worksingle-heading h3 pb-3 light-300 typo-space-line">{{$publication->title}}</h2>
                 <p class="worksingle-footer py-3 text-muted light-300">
-                    {{$publication->description_top}}
+                    {!!$publication->description_top!!}
                 </p>
             </div>
         </div><!-- End Blog Cover -->
@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col-md-8 m-auto text-left justify-content-center">
                 <p class="pt-5 text-muted light-300">
-                    {{$publication->description_bottom}}
+                    {!!$publication->description_bottom!!}
                 </p>
             </div>
         </div><!-- End Paragrph -->

@@ -41,8 +41,8 @@ Dashboard | A Premium Media Company
                             <th>SL.</th>
                             <th>Title</th>
                             <th>Images</th>
-                            <th>Description Ttop</th>
-                            <th>Description Bottom</th>
+                            {{-- <th>Description Ttop</th>
+                            <th>Description Bottom</th> --}}
                             <th>Youtube Video</th>
                             <th>Link</th>
                             <th>File</th>
@@ -57,8 +57,8 @@ Dashboard | A Premium Media Company
                                 <td>{{$i++;}}</td>
                                 <td>{{$publication->title}}</td>
                                 <td><img src="/uploads/publication_images/{{$publication->image}}" alt="" height="200px"></td>
-                                <td>{!!$publication->description_top!!}</td>
-                                <td>{!!$publication->description_bottom!!}</td>
+                                {{-- <td>{!!$publication->description_top!!}</td> --}}
+                                {{-- <td>{!!$publication->description_bottom!!}</td> --}}
                                 <td>{!!$publication->youtube_video!!}</td>
                                 <td>{{$publication->link}}</td>
                                 <td>{{$publication->pdf}}</td>
